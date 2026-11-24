@@ -1,0 +1,138 @@
+
+export const tools = [
+  {
+    name: 'EMI Calculator',
+    description: 'Calculate monthly loan EMI and total interest.',
+    href: '/emi-calculator',
+    icon: '🧮',
+    category: 'Loan & EMI',
+  },
+  {
+    name: 'FD Calculator',
+    description: 'Calculate fixed deposit maturity amount.',
+    href: '/fd-calculator',
+    icon: '🏦',
+    category: 'Banking & Deposit',
+  },
+  {
+    name: 'RD Calculator',
+    description: 'Calculate recurring deposit maturity amount.',
+    href: '/rd-calculator',
+    icon: '💰',
+    category: 'Banking & Deposit',
+  },
+  {
+    name: 'Simple Interest Calculator',
+    description: 'Calculate simple interest on your investment.',
+    href: '/simple-interest-calculator',
+    icon: '📊',
+    category: 'Banking & Deposit',
+  },
+  {
+    name: 'Compound Interest Calculator',
+    description: 'Calculate compound interest and maturity value.',
+    href: '/compound-interest-calculator',
+    icon: '📈',
+    category: 'Banking & Deposit',
+  },
+  {
+    name: 'Home Loan Calculator',
+    description: 'Estimate your home loan EMI and interest.',
+    href: '/home-loan-calculator',
+    icon: '🏠',
+    category: 'Loan & EMI',
+  },
+  {
+    name: 'Personal Loan Calculator',
+    description: 'Calculate personal loan monthly payments.',
+    href: '/personal-loan-calculator',
+    icon: '💵',
+    category: 'Loan & EMI',
+  },
+  {
+    name: 'Car Loan Calculator',
+    description: 'Estimate your car loan EMI.',
+    href: '/car-loan-calculator',
+    icon: '🚗',
+    category: 'Loan & EMI',
+  },
+  {
+    name: 'SIP Calculator',
+    description: 'Estimate your mutual fund SIP returns.',
+    href: '/sip-calculator',
+    icon: '📈',
+    category: 'Investment',
+  },
+  {
+    name: 'Lumpsum Calculator',
+    description: 'Calculate potential returns on a lumpsum investment.',
+    href: '/lumpsum-calculator',
+    icon: '💹',
+    category: 'Investment',
+  },
+  {
+    name: 'CAGR Calculator',
+    description: 'Calculate compound annual growth rate.',
+    href: '/cagr-calculator',
+    icon: '📉',
+    category: 'Investment',
+  },
+  {
+    name: 'PPF Calculator',
+    description: 'Estimate your Public Provident Fund returns.',
+    href: '/ppf-calculator',
+    icon: '🏛️',
+    category: 'Investment',
+  },
+  {
+    name: 'GST Calculator',
+    description: 'Calculate GST amount and final price.',
+    href: '/gst-calculator',
+    icon: '🧾',
+    category: 'Other Calculators',
+  },
+  {
+    name: 'Percentage Calculator',
+    description: 'Calculate percentage increase, decrease and values.',
+    href: '/percentage-calculator',
+    icon: '%',
+    category: 'Other Calculators',
+  },
+  {
+    name: 'Age Calculator',
+    description: 'Calculate your exact age in years, months and days.',
+    href: '/age-calculator',
+    icon: '🎂',
+    category: 'Other Calculators',
+  },
+  {
+    name: 'Calculator',
+    description: 'Perform everyday mathematical calculations.',
+    href: '/calculator',
+    icon: '🔣',
+    category: 'Other Calculators',
+  },
+] as const
+
+export const categories = [
+  {
+    name: 'Banking & Deposit',
+    icon: '🏦',
+    description: 'Calculate savings, deposits and interest returns.',
+  },
+  {
+    name: 'Loan & EMI',
+    icon: '💳',
+    description: 'Plan your loan payments and monthly EMI.',
+  },
+  {
+    name: 'Investment',
+    icon: '📈',
+    description: 'Estimate investment growth and returns.',
+  },
+  {
+    name: 'Other Calculators',
+    icon: '🔢',
+    description: 'Explore everyday financial and mathematical tools.',
+  },
+] as const

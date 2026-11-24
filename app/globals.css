@@ -1,0 +1,116 @@
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================
+   LIGHT THEME
+================================ */
+:root {
+  color-scheme: light;
+
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --primary: #2563eb;
+  --navbar: rgba(255, 255, 255, 0.88);
+}
+
+/* ================================
+   DARK THEME
+================================ */
+.dark {
+  color-scheme: dark;
+
+  --background: #0b1120;
+  --foreground: #f9fafb;
+  --card: #111c30;
+  --border: #273449;
+  --muted: #172337;
+  --muted-foreground: #9ca3af;
+  --primary: #60a5fa;
+  --navbar: rgba(11, 17, 32, 0.90);
+}
+
+/* ================================
+   READING THEME
+================================ */
+.reading {
+  color-scheme: light;
+
+  --background: #f7f3e9;
+  --foreground: #393329;
+  --card: #fffdf7;
+  --border: #e7deca;
+  --muted: #eee8da;
+  --muted-foreground: #786f60;
+  --primary: #936b37;
+  --navbar: rgba(247, 243, 233, 0.94);
+}
+
+/* ================================
+   GLOBAL STYLES
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Theme reusable classes */
+.theme-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.theme-input {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.theme-section {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.theme-navbar {
+  background-color: var(--navbar);
+  border-color: var(--border);
+}
+
+/* Reading mode typography */
+.reading {
+  line-height: 1.8;
+}
+
+.reading article,
+.reading .reading-content {
+  color: var(--foreground);
+  line-height: 1.9;
+}
+
+/* Smooth theme transitions */
+* {
+  transition-property:
+    background-color,
+    border-color,
+    color;
+  transition-duration: 200ms;
+}
+
+/* Selection */
+::selection {
+  background: #3b82f6;
+  color: white;
+}
