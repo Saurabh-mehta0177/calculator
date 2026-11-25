@@ -10,102 +10,218 @@ import WhyChooseUs from '@/components/home/WhyChooseUs'
 import LatestGuides from '@/components/home/LatestGuides'
 import FAQ from '@/components/home/FAQ'
 
-import MoneyFuturePreview from '@/components/home/Money\'s Future'
-//import MoneyFuturePreview from '@/components/home/MoneyFuturePreview'
+import MoneyFuturePreview from "@/components/home/Money's Future"
 import MoneyLeakDetectorPreview from '@/components/home/MoneyLeakDetectorPreview'
 
 import FinancialRegretPreview from '@/components/home/FinancialRegretPreview'
 import OneRupeeChallengePreview from '@/components/home/OneRupeeChallengePreview'
 
+// SEO Metadata
 export const metadata: Metadata = {
-  title: 'Free Financial Calculators - EMI, FD, SIP, RD & GST Calculator',
+  metadataBase: new URL('https://YOUR-DOMAIN.com'),
+
+  title: {
+    default: 'FinanceTools - Free Financial Calculators',
+    template: '%s | FinanceTools',
+  },
 
   description:
-    'Use free online financial calculators to calculate EMI, fixed deposit interest, recurring deposits, SIP returns, GST and loan payments. Make smarter financial decisions.',
+    'Calculate EMI, SIP, FD, RD, GST, loan payments and investment returns with free online financial calculators. Plan your money, track expenses and make smarter financial decisions.',
+
+  applicationName: 'FinanceTools',
 
   keywords: [
     'financial calculators',
+    'free financial calculators',
+    'online financial calculator',
     'EMI calculator',
+    'SIP calculator',
     'FD calculator',
     'RD calculator',
-    'SIP calculator',
     'GST calculator',
     'loan calculator',
-    'free online calculators',
+    'investment calculator',
+    'savings calculator',
+    'money management tools',
+    'financial planning',
+    'money saving calculator',
   ],
+
+  authors: [
+    {
+      name: 'FinanceTools',
+    },
+  ],
+
+  creator: 'FinanceTools',
+  publisher: 'FinanceTools',
 
   alternates: {
     canonical: '/',
   },
 
   openGraph: {
-    title: 'Free Financial Calculators',
+    title: 'FinanceTools - Free Financial Calculators',
+
     description:
-      'Calculate EMI, FD, RD, SIP, GST and loan payments using free online financial tools.',
+      'Calculate, plan, save and grow. Explore free financial calculators for EMI, SIP, FD, RD, GST, investments and savings.',
+
+    url: '/',
+
+    siteName: 'FinanceTools',
+
+    locale: 'en_IN',
+
     type: 'website',
+
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'FinanceTools - Smart Financial Calculator',
+        type: 'image/png',
+      },
+    ],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title: 'FinanceTools - Free Financial Calculators',
+
+    description:
+      'Calculate, plan, save and grow with free online financial calculators.',
+
+    images: {
+      url: '/og-image.png',
+      alt: 'FinanceTools - Smart Financial Calculator',
+    },
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
+  category: 'finance',
 }
 
+// Home Page
 export default function Home() {
   return (
     <MainLayout>
-
-      <div className="space-y-12">
+      <main className="space-y-12">
 
         {/* HERO SECTION */}
-        <Hero />
-
-        {/* SEARCH CALCULATORS */}
-        <SearchTools />
-
-        {/* CALCULATOR CATEGORIES */}
-        <Categories />
-
-        {/* WHY CHOOSE US */}
-        <WhyChooseUs />
-
-        {/* FINANCIAL GUIDES */}
-        <LatestGuides />
-
-        {/* FREQUENTLY ASKED QUESTIONS */}
-        <FAQ />
-
-        {/* MONEY'S FUTURE PREVIEW */}
-        <MoneyFuturePreview />
-
-        {/* MONEY LEAK DETECTOR PREVIEW */}
-        <MoneyLeakDetectorPreview />
-
-        {/* FINANCIAL REGRET */}
-        <FinancialRegretPreview />
-
-        {/* ONE RUPEE CHALLENGE */}
-        <OneRupeeChallengePreview />
-
-        {/* BOTTOM CTA */}
-        <section className="rounded-2xl border border-gray-200 bg-gray-100 px-6 py-10 text-center dark:border-gray-800 dark:bg-gray-900 sm:px-10">
-
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
-            Plan Your Financial Future
-          </h2>
-
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-gray-600 dark:text-gray-400">
-            Use our free financial calculators to estimate
-            investments, loan payments and savings.
-            Make informed financial decisions with confidence.
-          </p>
-
-          <a
-            href="/tools"
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-1 hover:bg-blue-700"
-          >
-            Explore All Calculators →
-          </a>
-
+        <section aria-label="Welcome to FinanceTools">
+          <Hero />
         </section>
 
-      </div>
+        {/* SEARCH CALCULATORS */}
+        <section aria-label="Search financial calculators">
+          <SearchTools />
+        </section>
 
+        {/* CALCULATOR CATEGORIES */}
+        <section aria-label="Financial calculator categories">
+          <Categories />
+        </section>
+
+        {/* WHY CHOOSE US */}
+        <section aria-label="Why choose FinanceTools">
+          <WhyChooseUs />
+        </section>
+
+        {/* FINANCIAL GUIDES */}
+        <section aria-label="Financial guides and articles">
+          <LatestGuides />
+        </section>
+
+        {/* FREQUENTLY ASKED QUESTIONS */}
+        <section aria-label="Frequently asked questions">
+          <FAQ />
+        </section>
+
+        {/* MONEY'S FUTURE PREVIEW */}
+        <section aria-label="Plan your financial future">
+          <MoneyFuturePreview />
+        </section>
+
+        {/* MONEY LEAK DETECTOR PREVIEW */}
+        <section aria-label="Money Leak Detector">
+          <MoneyLeakDetectorPreview />
+        </section>
+
+        {/* FINANCIAL REGRET */}
+        <section aria-label="Financial Regret Calculator">
+          <FinancialRegretPreview />
+        </section>
+
+        {/* ONE RUPEE CHALLENGE */}
+        <section aria-label="One Rupee Challenge">
+          <OneRupeeChallengePreview />
+        </section>
+
+        {/* BOTTOM CTA */}
+        <section
+          aria-labelledby="financial-cta-title"
+          className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-indigo-100 px-6 py-12 text-center shadow-sm dark:border-gray-800 dark:from-gray-950 dark:via-gray-900 dark:to-blue-950 sm:px-10 sm:py-16"
+        >
+          {/* Decorative Background */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl dark:bg-blue-500/10"
+          />
+
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-500/10"
+          />
+
+          <div className="relative mx-auto max-w-3xl">
+
+            <span className="inline-flex items-center rounded-full border border-blue-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-blue-700 dark:border-blue-900 dark:bg-gray-900/80 dark:text-blue-300">
+              Your Personal Finance Partner
+            </span>
+
+            <h2
+              id="financial-cta-title"
+              className="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl"
+            >
+              Plan Your Financial Future
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-600 dark:text-gray-400 sm:text-base">
+              Use our free financial calculators to estimate investments,
+              loan payments, savings and monthly expenses. Make informed
+              financial decisions with confidence.
+            </p>
+
+            <a
+              href="/tools"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition duration-300 hover:-translate-y-1 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+            >
+              Explore All Calculators
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <p className="mt-4 text-xs text-gray-500 dark:text-gray-500">
+              Free tools. Smarter planning. Better financial decisions.
+            </p>
+
+          </div>
+        </section>
+
+      </main>
     </MainLayout>
   )
 }
