@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://smartmoneytools.xyz/sitemap.xml
