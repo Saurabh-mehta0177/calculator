@@ -46,27 +46,27 @@ export const metadata: Metadata = {
   },
 
   // Favicon and Website Icons
-  // icons: {
-  //   icon: [
-  //     {
-  //       url: "/icon.png",
-  //       type: "image/png",
-  //     },
-  //   ],
-  //   shortcut: "/icon.png",
-  //   apple: "/icon.png",
-  // },
-
   icons: {
-  icon: [
-    {
-      url: "/calculator/icon.png",
-      type: "image/png",
-    },
-  ],
-  shortcut: "/calculator/icon.png",
-  apple: "/calculator/icon.png",
-},
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
+//   icons: {
+//   icon: [
+//     {
+//       url: "/calculator/icon.png",
+//       type: "image/png",
+//     },
+//   ],
+//   shortcut: "/calculator/icon.png",
+//   apple: "/calculator/icon.png",
+// },
 
   // Google, WhatsApp, Facebook, LinkedIn Preview
   openGraph: {
