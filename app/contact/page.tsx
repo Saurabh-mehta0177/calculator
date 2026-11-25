@@ -126,7 +126,7 @@ export default function ContactPage() {
                     Explore our free financial tools
                   </p>
                   <Link
-                    href="/"
+                    href="https://smartmoneytools.xyz/"
                     className="mt-2 inline-block font-medium text-blue-600 hover:underline"
                   >
                     Visit FinanceTools →
