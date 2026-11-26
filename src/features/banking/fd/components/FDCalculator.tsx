@@ -53,9 +53,8 @@ export default function FDCalculator() {
           </h1>
 
           <p className="mt-3 max-w-2xl text-sm leading-7 text-emerald-50 sm:text-base">
-            Calculate your FD maturity amount, total investment
-            and interest earned. Adjust the values to explore
-            different interest rates and investment periods.
+            Calculate your Fixed Deposit (FD) maturity amount, total interest earned and investment returns.
+             Adjust your deposit amount, annual interest rate, compounding frequency and tenure to estimate your FD returns instantly.
           </p>
 
         </div>
@@ -101,7 +100,7 @@ export default function FDCalculator() {
                   </h2>
 
                   <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                    Change values to update your calculation instantly.
+                    Enter your deposit amount, expected annual interest rate and investment tenure to calculate your estimated FD maturity value.
                   </p>
 
                 </div>
@@ -147,9 +146,8 @@ export default function FDCalculator() {
                 </p>
 
                 <p className="mt-3 text-xs leading-5 text-slate-500 dark:text-slate-400">
-                  Estimated maturity value based on your deposit
-                  amount, interest rate and investment duration.
-                  Actual bank calculations may vary.
+                 This is your estimated FD maturity amount, including your initial deposit and accumulated interest.
+                  Actual returns may vary depending on your bank's compounding rules, deposit tenure, payout option and applicable terms.
                 </p>
 
               </div>

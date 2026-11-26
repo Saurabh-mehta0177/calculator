@@ -1,393 +1,265 @@
 
+
+import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Financial Disclaimer | FinanceTools",
+export const metadata: Metadata = {
+  title: "Disclaimer | SmartMoneyTools",
   description:
-    "Read the FinanceTools disclaimer covering financial calculators, estimated results, investment risks, advertising, third-party links and website information.",
-  robots: {
-    index: true,
-    follow: true,
+    "Read the SmartMoneyTools disclaimer. Understand the limitations of our financial calculators and educational content before relying on any results.",
+  alternates: {
+    canonical: "https://smartmoneytools.xyz/disclaimer/",
+  },
+  openGraph: {
+    title: "Disclaimer | SmartMoneyTools",
+    description:
+      "Important information about the use of SmartMoneyTools calculators and financial content.",
+    url: "https://smartmoneytools.xyz/disclaimer/",
+    siteName: "SmartMoneyTools",
+    type: "website",
   },
 };
 
 const sections = [
   {
-    number: "01",
-    title: "General Information",
+    title: "1. General Information",
+    content: (
+      <p>
+        The information and tools available on SmartMoneyTools are provided for
+        general informational and educational purposes only. We aim to make
+        financial calculations easier to understand, but the content on this
+        website should not be treated as a substitute for professional advice.
+      </p>
+    ),
+  },
+  {
+    title: "2. Not Financial, Investment, Tax or Legal Advice",
+    content: (
+      <p>
+        SmartMoneyTools does not provide personalized financial, investment,
+        tax, accounting or legal advice. Any examples, explanations or
+        calculator results are general in nature and may not suit your
+        circumstances. Consider consulting a qualified professional before
+        making financial or legal decisions.
+      </p>
+    ),
+  },
+  {
+    title: "3. Calculator Results and Estimates",
     content: (
       <>
         <p>
-          Welcome to FinanceTools. The information and resources available on
-          this website are provided for general educational and informational
-          purposes only.
+          Our calculators provide estimates based on the information you enter
+          and the assumptions used by each calculator. Actual results may
+          differ because of interest rates, fees, taxes, lender policies,
+          product terms, rounding methods and other factors.
         </p>
         <p>
-          FinanceTools provides online financial calculators, financial
-          planning tools, educational guides and other related resources to
-          help users understand common financial concepts.
-        </p>
-        <p>
-          Although we aim to provide useful and accurate information, we do
-          not guarantee that all information on this website is complete,
-          accurate, current or suitable for every individual situation.
+          Calculator results are not quotes, guarantees, approvals or promises
+          of future returns. Please verify important figures with the relevant
+          bank, lender, financial institution or qualified professional.
         </p>
       </>
     ),
   },
   {
-    number: "02",
-    title: "Financial Calculator Disclaimer",
+    title: "4. Accuracy and Availability",
     content: (
-      <>
-        <p>
-          The calculators available on FinanceTools, including EMI, FD, RD,
-          SIP, compound interest, loan, PPF, GST and other calculators,
-          generate estimated results based on the values and assumptions
-          entered by users.
-        </p>
-        <p>
-          Actual financial calculations may differ depending on the bank,
-          financial institution, investment provider, applicable regulations,
-          compounding frequency, fees, taxes and other conditions.
-        </p>
-        <p>
-          Users should independently verify all calculations with the
-          relevant bank or financial institution before making financial
-          decisions.
-        </p>
-      </>
+      <p>
+        We make reasonable efforts to keep the website useful and accurate, but
+        we do not guarantee that its information, calculations or features
+        will always be complete, current, error-free or available. Content and
+        tools may be updated, changed, interrupted or removed without notice.
+      </p>
     ),
   },
   {
-    number: "03",
-    title: "No Financial or Investment Advice",
+    title: "5. Your Responsibility",
     content: (
-      <>
-        <p>
-          Nothing published on FinanceTools should be considered professional
-          financial, investment, tax, legal or accounting advice.
-        </p>
-        <p>
-          The information provided is not a recommendation to buy, sell or
-          hold any financial product, security, mutual fund or investment.
-        </p>
-        <p>
-          Before making financial decisions, consider consulting a qualified
-          financial advisor or other relevant professional who understands
-          your personal financial circumstances.
-        </p>
-      </>
+      <p>
+        You are responsible for checking the information you enter, reviewing
+        the results and deciding how to use them. Before acting on any result,
+        independently confirm the relevant terms, rates, charges and
+        requirements with the appropriate provider.
+      </p>
     ),
   },
   {
-    number: "04",
-    title: "Investment Risk and Returns",
+    title: "6. External Websites and Third-Party Services",
     content: (
-      <>
-        <p>
-          All investments involve some level of risk. The value of investments
-          may increase or decrease depending on market conditions and other
-          factors.
-        </p>
-        <p>
-          Any projected returns, SIP estimates, compound interest calculations,
-          wealth forecasts or investment comparisons displayed on this website
-          are illustrative estimates only.
-        </p>
-        <p>
-          Past performance and hypothetical projections do not guarantee
-          future returns. Actual investment results may be significantly
-          different from the estimates shown by our tools.
-        </p>
-      </>
+      <p>
+        This website may contain links to third-party websites, services or
+        resources. These links are provided for convenience only. We do not
+        control or guarantee the accuracy, availability, content or practices
+        of third-party websites. Visiting or using them is at your own
+        discretion and subject to their own terms and policies.
+      </p>
     ),
   },
   {
-    number: "05",
-    title: "Banking, Loan and Deposit Information",
+    title: "7. Advertising and Affiliate Links",
     content: (
-      <>
-        <p>
-          Interest rates, loan terms, EMI amounts, fixed deposit returns and
-          other banking-related figures displayed by our calculators are
-          estimates based on user inputs.
-        </p>
-        <p>
-          Actual terms may vary according to the financial institution,
-          customer eligibility, applicable charges, taxes and prevailing
-          policies.
-        </p>
-        <p>
-          FinanceTools is not a bank, lender, financial institution or
-          investment provider and does not directly provide loans or accept
-          deposits.
-        </p>
-      </>
+      <p>
+        SmartMoneyTools may display advertisements or use affiliate links in
+        the future. If applicable, we may receive compensation when you view,
+        click or make a purchase through certain links. Such arrangements do
+        not guarantee or constitute an endorsement of any product or service.
+        Please review the relevant provider’s terms before making a decision.
+      </p>
     ),
   },
   {
-    number: "06",
-    title: "Third-Party Websites and External Links",
+    title: "8. Limitation of Liability",
     content: (
-      <>
-        <p>
-          Our website may contain links to external websites, services or
-          resources for additional information and convenience.
-        </p>
-        <p>
-          We do not control the content, accuracy, availability, privacy
-          practices or policies of third-party websites.
-        </p>
-        <p>
-          Visiting external websites through links on FinanceTools is at your
-          own discretion and risk. We recommend reviewing their respective
-          terms and privacy policies.
-        </p>
-      </>
+      <p>
+        To the extent permitted by applicable law, SmartMoneyTools and its
+        owners or contributors will not be liable for losses or damages arising
+        from your use of, or reliance on, this website, its content, calculator
+        results or third-party links. This includes errors, omissions,
+        interruptions or changes to the website.
+      </p>
     ),
   },
   {
-    number: "07",
-    title: "Advertising and Google AdSense",
+    title: "9. Changes to This Disclaimer",
     content: (
-      <>
-        <p>
-          FinanceTools may display advertisements provided by third-party
-          advertising networks, including Google AdSense.
-        </p>
-        <p>
-          These advertising services may use cookies or similar technologies
-          to deliver, measure and personalize advertisements, subject to
-          applicable privacy requirements and user choices.
-        </p>
-        <p>
-          The appearance of an advertisement does not constitute an
-          endorsement, recommendation or guarantee of the advertised product
-          or service by FinanceTools.
-        </p>
-        <p>
-          Users should independently evaluate any product or service before
-          purchasing or using it.
-        </p>
-      </>
-    ),
-  },
-  {
-    number: "08",
-    title: "Accuracy and Availability of Information",
-    content: (
-      <>
-        <p>
-          We make reasonable efforts to maintain the accuracy and usefulness
-          of our website content. However, financial rules, interest rates,
-          tax regulations and market conditions can change over time.
-        </p>
-        <p>
-          We do not guarantee uninterrupted website availability or that all
-          tools and features will always operate without errors.
-        </p>
-        <p>
-          We reserve the right to update, modify or remove website content
-          and features when necessary.
-        </p>
-      </>
-    ),
-  },
-  {
-    number: "09",
-    title: "Limitation of Liability",
-    content: (
-      <>
-        <p>
-          To the extent permitted by applicable law, FinanceTools and its
-          website operators shall not be responsible for losses or damages
-          arising from reliance on website information, calculator estimates
-          or third-party content.
-        </p>
-        <p>
-          Users are responsible for verifying information and making their
-          own decisions before taking financial action.
-        </p>
-      </>
-    ),
-  },
-  {
-    number: "10",
-    title: "Changes to This Disclaimer",
-    content: (
-      <>
-        <p>
-          We may revise or update this Disclaimer from time to time to reflect
-          changes in our services, website features or applicable requirements.
-        </p>
-        <p>
-          Any updated version will be published on this page. We encourage
-          visitors to review this page periodically.
-        </p>
-      </>
-    ),
-  },
-  {
-    number: "11",
-    title: "Contact Information",
-    content: (
-      <>
-        <p>
-          If you have questions or concerns regarding this Disclaimer or
-          information published on FinanceTools, please contact us.
-        </p>
-        <p>
-          Email:{" "}
-          <a
-            href="mailto:contact@financetools.com"
-            className="font-semibold text-blue-700 hover:underline"
-          >
-            contact@financetools.com
-          </a>
-        </p>
-        <p>
-          You can also visit our{" "}
-          <Link
-            href="/contact"
-            className="font-semibold text-blue-700 hover:underline"
-          >
-            Contact Us page
-          </Link>{" "}
-          to send us your questions or feedback.
-        </p>
-      </>
+      <p>
+        We may update this Disclaimer from time to time. Any changes will be
+        posted on this page. Your continued use of the website after changes
+        are posted means you acknowledge the updated Disclaimer.
+      </p>
     ),
   },
 ];
 
 export default function DisclaimerPage() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 px-5 py-20 text-white">
-        <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-blue-400/10 blur-3xl" />
-        <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-indigo-400/10 blur-3xl" />
+    <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+      <section className="relative isolate overflow-hidden border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/70 via-white to-white dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900"
+        />
 
-        <div className="relative mx-auto max-w-5xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm">
-            <span>⚖️</span>
-            Legal Information
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 dark:border-blue-900 dark:bg-blue-950/50 dark:text-blue-300">
+            <span
+              aria-hidden="true"
+              className="h-2 w-2 rounded-full bg-blue-500"
+            />
+            Website information
           </div>
 
-          <h1 className="mt-7 text-4xl font-extrabold leading-tight md:text-6xl">
-            Website
-            <span className="block text-blue-300">Disclaimer</span>
+          <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+            Disclaimer
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-blue-100">
-            Important information about our financial calculators, educational
-            content, investment estimates and website services. Please read
-            this disclaimer carefully before using FinanceTools.
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Please read this Disclaimer before using SmartMoneyTools. It
+            explains the purpose and limitations of the information and
+            calculator results available on our website.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3 text-sm text-blue-100">
-            <span className="rounded-lg bg-white/10 px-4 py-3">
-              ⚖️ Transparency
+          <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            Website:{" "}
+            <span className="font-medium text-slate-700 dark:text-slate-200">
+              SmartMoneyTools
             </span>
-            <span className="rounded-lg bg-white/10 px-4 py-3">
-              🔒 User Awareness
-            </span>
-            <span className="rounded-lg bg-white/10 px-4 py-3">
-              📊 Financial Information
-            </span>
-          </div>
+          </p>
         </div>
       </section>
 
-      {/* Disclaimer Content */}
-      <section className="px-5 py-14">
-        <div className="mx-auto max-w-5xl">
-          {/* Notice */}
-          <div className="mb-10 rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
-            <div className="flex items-start gap-4">
-              <div className="text-3xl">⚠️</div>
-              <div>
-                <h2 className="text-lg font-bold text-amber-950">
-                  Important Financial Notice
-                </h2>
-                <p className="mt-2 text-sm leading-7 text-amber-900">
-                  All financial calculations and projections on FinanceTools
-                  are estimates for educational purposes. They should not be
-                  treated as guaranteed results or personalized financial
-                  advice. Always verify important financial information with
-                  the relevant institution or qualified professional.
-                </p>
-              </div>
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
+          <article className="space-y-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-900/70 dark:bg-amber-950/30">
+              <h2 className="text-base font-semibold text-amber-900 dark:text-amber-200">
+                Important notice
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-amber-900/90 dark:text-amber-100/90">
+                SmartMoneyTools calculators provide estimates, not guaranteed
+                outcomes. Do not make a financial decision based only on a
+                calculator result or information from this website.
+              </p>
             </div>
-          </div>
 
-          {/* Intro Card */}
-          <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
-            <h2 className="text-2xl font-bold text-slate-900">
-              About This Disclaimer
-            </h2>
-            <p className="mt-4 leading-8 text-slate-600">
-              This Disclaimer explains the limitations and conditions
-              associated with using the FinanceTools website. By accessing
-              or using our website, you acknowledge that you have read and
-              understood the information provided on this page.
-            </p>
-          </div>
-
-          {/* Content Sections */}
-          <div className="space-y-5">
             {sections.map((section) => (
-              <article
-                key={section.number}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md sm:p-8"
+              <section
+                key={section.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-7"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 font-bold text-blue-700">
-                    {section.number}
-                  </div>
-
-                  <div className="min-w-0 flex-1">
-                    <h2 className="text-xl font-bold text-slate-900">
-                      {section.title}
-                    </h2>
-                    <div className="mt-4 space-y-4 text-sm leading-8 text-slate-600">
-                      {section.content}
-                    </div>
-                  </div>
+                <h2 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+                  {section.title}
+                </h2>
+                <div className="mt-3 space-y-3 text-[15px] leading-7 text-slate-600 dark:text-slate-300">
+                  {section.content}
                 </div>
-              </article>
+              </section>
             ))}
-          </div>
 
-          {/* Final Note */}
-          <div className="mt-10 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-900 p-8 text-center text-white sm:p-10">
-            <div className="text-4xl">💡</div>
-            <h2 className="mt-4 text-2xl font-bold">
-              Make Informed Financial Decisions
+            <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-7">
+              <h2 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
+                10. Contact Us
+              </h2>
+              <p className="mt-3 text-[15px] leading-7 text-slate-600 dark:text-slate-300">
+                If you have questions about this Disclaimer, please contact
+                us:
+              </p>
+              <a
+                href="mailto:contact@financetools.com"
+                className="mt-3 inline-flex font-medium text-blue-600 underline decoration-blue-300 underline-offset-4 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+              >
+                contact@financetools.com
+              </a>
+            </section>
+
+            <p className="px-1 text-sm leading-6 text-slate-500 dark:text-slate-400">
+              By using SmartMoneyTools, you acknowledge that you have read and
+              understood this Disclaimer.
+            </p>
+          </article>
+
+          <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:sticky lg:top-24">
+            <h2 className="text-base font-semibold text-slate-900 dark:text-white">
+              Explore SmartMoneyTools
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-blue-100">
-              FinanceTools is designed to make financial calculations easier
-              to understand. Use our tools as a starting point for your
-              research and always verify important decisions independently.
+            <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Use our tools to estimate common financial calculations.
             </p>
-            <Link
-              href="/"
-              className="mt-7 inline-flex rounded-xl bg-white px-7 py-3.5 font-bold text-blue-900 transition hover:bg-blue-50"
-            >
-              Explore Financial Tools →
-            </Link>
-          </div>
 
-          {/* Last Updated */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-slate-500">
-              FinanceTools | Disclaimer
-            </p>
-            <p className="mt-2 text-xs text-slate-400">
-              Please review this page periodically for updates.
-            </p>
-          </div>
+            <Link
+              href="/tools"
+              className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+            >
+              Explore Calculators
+            </Link>
+
+            <div className="mt-5 border-t border-slate-200 pt-5 dark:border-slate-800">
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
+                Related pages
+              </h3>
+              <nav aria-label="Related pages" className="mt-3 space-y-2">
+                <Link
+                  href="/privacy-policy"
+                  className="block text-sm text-slate-600 transition hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms-and-conditions"
+                  className="block text-sm text-slate-600 transition hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
+                >
+                  Terms &amp; Conditions
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block text-sm text-slate-600 transition hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
+                >
+                  Contact Us
+                </Link>
+              </nav>
+            </div>
+          </aside>
         </div>
       </section>
     </main>

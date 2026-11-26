@@ -1,212 +1,338 @@
-// app/terms/page.tsx
+
+
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | FinanceTools",
   description:
-    "Read the Terms & Conditions of FinanceTools. Understand the rules and guidelines for using our free financial calculators.",
+    "Read the Terms and Conditions for using FinanceTools financial calculators, including important information about estimates, user responsibilities, and data handling.",
 };
+
+const sections = [
+  {
+    title: "1. Acceptance of Terms",
+    content: (
+      <p>
+        By accessing or using FinanceTools, you agree to these Terms &
+        Conditions. If you do not agree with these terms, please do not use
+        this website.
+      </p>
+    ),
+  },
+  {
+    title: "2. About FinanceTools",
+    content: (
+      <p>
+        FinanceTools provides free online financial calculators and related
+        informational content, including tools for EMI, loans, fixed deposits,
+        recurring deposits, SIP, GST and other financial calculations. The
+        website is intended to help users understand and estimate common
+        financial calculations.
+      </p>
+    ),
+  },
+  {
+    title: "3. No Account or Login Required",
+    content: (
+      <p>
+        FinanceTools does not require users to create an account, register or
+        log in to use its calculators. You can access the available tools
+        without creating a user profile.
+      </p>
+    ),
+  },
+  {
+    title: "4. Calculator Inputs and User Data",
+    content: (
+      <>
+        <p>
+          FinanceTools does not intentionally save the information you enter
+          into its financial calculators. Calculator inputs are used to
+          generate the requested calculation and are not stored by us as a
+          user account or personal financial profile.
+        </p>
+        <p>
+          Please avoid entering sensitive personal information into calculator
+          fields. If you contact us through a contact form or email, the
+          information you choose to send may be used to respond to your
+          message.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "5. Estimates, Not Financial Advice",
+    content: (
+      <p>
+        Calculator results and website content are provided for general
+        informational and educational purposes only. They are not financial,
+        investment, tax, accounting or legal advice. Results are estimates
+        based on the information entered and the assumptions used by the
+        calculator. Actual figures may differ from those provided by banks,
+        lenders or other financial institutions.
+      </p>
+    ),
+  },
+  {
+    title: "6. Accuracy of Results",
+    content: (
+      <p>
+        We make reasonable efforts to provide useful and accurate tools, but
+        we do not guarantee that every result or piece of information will be
+        complete, current or error-free. Rates, fees, taxes, terms and
+        calculation methods may vary between providers and over time. Please
+        verify important figures with the relevant institution before making
+        a decision.
+      </p>
+    ),
+  },
+  {
+    title: "7. User Responsibilities",
+    content: (
+      <>
+        <p>When using FinanceTools, you agree to:</p>
+        <ul className="mt-3 list-disc space-y-2 pl-5">
+          <li>Use the website only for lawful purposes.</li>
+          <li>
+            Provide appropriate information when using calculators or
+            contacting us.
+          </li>
+          <li>
+            Not attempt to disrupt, damage, hack or misuse the website or its
+            tools.
+          </li>
+          <li>
+            Not copy, redistribute or commercially exploit website content or
+            tools without permission, except where permitted by law.
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "8. Intellectual Property",
+    content: (
+      <p>
+        Unless otherwise stated, the website’s text, branding, design and
+        original materials belong to FinanceTools or are used with permission.
+        You may not reproduce, distribute or create derivative works from
+        these materials without the required permission, except where
+        applicable law allows it.
+      </p>
+    ),
+  },
+  {
+    title: "9. Third-Party Websites and Services",
+    content: (
+      <p>
+        FinanceTools may contain links to third-party websites or services.
+        These links are provided for convenience. We do not control and are
+        not responsible for the content, availability, terms or privacy
+        practices of external websites. Please review their policies before
+        using them.
+      </p>
+    ),
+  },
+  {
+    title: "10. Website Availability and Changes",
+    content: (
+      <p>
+        We may update, modify, suspend or discontinue website features or
+        calculators at any time. We do not guarantee uninterrupted access to
+        the website and may make changes without prior notice.
+      </p>
+    ),
+  },
+  {
+    title: "11. Limitation of Liability",
+    content: (
+      <p>
+        To the extent permitted by applicable law, FinanceTools and its owners
+        or contributors are not responsible for losses or damages arising from
+        the use of, inability to use, or reliance on this website, its
+        calculators, content or third-party links. This includes decisions
+        made based on calculator estimates. Nothing in these terms excludes
+        liability that cannot legally be excluded.
+      </p>
+    ),
+  },
+  {
+    title: "12. Changes to These Terms",
+    content: (
+      <p>
+        We may revise these Terms & Conditions from time to time. Updated
+        terms will be published on this page with a revised date. Your
+        continued use of the website after an update means you accept the
+        revised terms.
+      </p>
+    ),
+  },
+  {
+    title: "13. Governing Law",
+    content: (
+      <p>
+        These Terms & Conditions are governed by the laws of India, subject
+        to applicable legal requirements. Any dispute will be handled by a
+        court or forum with appropriate jurisdiction under applicable law.
+      </p>
+    ),
+  },
+];
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
+    <main className="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950 text-white">
-        <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Terms & Conditions
+      <section className="border-b border-slate-200 bg-gradient-to-br from-slate-100 via-white to-indigo-50 dark:border-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-indigo-950/40">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center rounded-full border border-indigo-200 bg-white/80 px-3 py-1 text-sm font-medium text-indigo-700 dark:border-indigo-900 dark:bg-slate-900/70 dark:text-indigo-300">
+              Website guidelines
+            </span>
+
+            <h1 className="mt-5 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+              Terms &amp; Conditions
             </h1>
-            <p className="mt-3 text-slate-300">
-              Last updated: November 21, 2026
+
+            <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
+              Please read these terms before using FinanceTools and its free
+              financial calculators.
+            </p>
+
+            <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              Last updated: November 26, 2026
             </p>
           </div>
         </div>
       </section>
 
       {/* Content */}
-      <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-          <div className="prose prose-slate max-w-none">
-            <p className="text-lg leading-relaxed text-slate-600">
-              Welcome to <strong>FinanceTools</strong>. By accessing or using
-              our website and free financial calculators, you agree to be bound
-              by these Terms & Conditions. Please read them carefully.
-            </p>
-
-            <hr className="my-8 border-slate-200" />
-
-            {/* 1 */}
-            <h2 className="text-xl font-bold text-slate-900">
-              1. Acceptance of Terms
-            </h2>
-            <p className="mt-3 text-slate-600">
-              By using FinanceTools, you confirm that you have read, understood,
-              and agree to these Terms & Conditions. If you do not agree with
-              any part of these terms, please do not use our website.
-            </p>
-
-            {/* 2 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              2. Description of Service
-            </h2>
-            <p className="mt-3 text-slate-600">
-              FinanceTools provides free online financial calculators including
-              (but not limited to) EMI Calculator, FD Calculator, SIP
-              Calculator, Loan Calculators, GST Calculator, and other related
-              tools. These tools are designed for educational and informational
-              purposes only.
-            </p>
-
-            {/* 3 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              3. No Financial Advice
-            </h2>
-            <p className="mt-3 text-slate-600">
-              The calculators and information on this website are{" "}
-              <strong>not financial, investment, tax, or legal advice</strong>.
-              Results shown are estimates based on the data you enter and may
-              differ from actual bank or financial institution calculations.
-            </p>
-            <p className="mt-3 text-slate-600">
-              Always consult a qualified financial advisor, bank, or relevant
-              institution before making any financial decision.
-            </p>
-
-            {/* 4 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              4. Accuracy of Results
-            </h2>
-            <p className="mt-3 text-slate-600">
-              While we strive to provide accurate calculations, we do not
-              guarantee that the results will be error-free or match the exact
-              figures provided by banks, NBFCs, or other financial institutions.
-              Interest rates, fees, and calculation methods can vary.
-            </p>
-
-            {/* 5 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              5. User Responsibilities
-            </h2>
-            <p className="mt-3 text-slate-600">You agree to:</p>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
-              <li>Use the website only for lawful purposes</li>
-              <li>
-                Not attempt to disrupt, hack, or misuse the website or its
-                calculators
-              </li>
-              <li>
-                Provide accurate information when using contact forms (if any)
-              </li>
-              <li>
-                Not copy, redistribute, or commercially exploit our tools
-                without permission
-              </li>
-            </ul>
-
-            {/* 6 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              6. Intellectual Property
-            </h2>
-            <p className="mt-3 text-slate-600">
-              All content on this website, including text, design, logos,
-              calculators, and code structure, is the property of FinanceTools
-              unless otherwise stated. You may not reproduce, distribute, or
-              create derivative works without our prior written consent.
-            </p>
-
-            {/* 7 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              7. Limitation of Liability
-            </h2>
-            <p className="mt-3 text-slate-600">
-              FinanceTools and its owners shall not be liable for any direct,
-              indirect, incidental, or consequential damages arising from:
-            </p>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600">
-              <li>Use or inability to use the calculators</li>
-              <li>Reliance on any calculation results</li>
-              <li>Any errors or inaccuracies in the tools</li>
-              <li>Financial decisions made based on the information provided</li>
-            </ul>
-
-            {/* 8 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              8. Third-Party Links
-            </h2>
-            <p className="mt-3 text-slate-600">
-              Our website may contain links to third-party websites. We are not
-              responsible for the content, privacy practices, or terms of those
-              external sites.
-            </p>
-
-            {/* 9 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              9. Modifications to the Service
-            </h2>
-            <p className="mt-3 text-slate-600">
-              We reserve the right to modify, suspend, or discontinue any part
-              of the website or calculators at any time without prior notice.
-            </p>
-
-            {/* 10 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              10. Changes to These Terms
-            </h2>
-            <p className="mt-3 text-slate-600">
-              We may update these Terms & Conditions from time to time. The
-              updated version will be posted on this page with a revised “Last
-              updated” date. Continued use of the website after changes means
-              you accept the new terms.
-            </p>
-
-            {/* 11 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              11. Governing Law
-            </h2>
-            <p className="mt-3 text-slate-600">
-              These Terms & Conditions shall be governed by and construed in
-              accordance with the laws of India. Any disputes arising out of
-              these terms shall be subject to the exclusive jurisdiction of the
-              courts in India.
-            </p>
-
-            {/* 12 */}
-            <h2 className="mt-10 text-xl font-bold text-slate-900">
-              12. Contact Us
-            </h2>
-            <p className="mt-3 text-slate-600">
-              If you have any questions about these Terms & Conditions, please
-              contact us:
-            </p>
-            <div className="mt-4 rounded-lg bg-slate-50 p-4 text-slate-700">
-              <p>
-                <strong>Website:</strong>{" "}
-                <Link href="/" className="text-blue-600 hover:underline">
-                  FinanceTools
-                </Link>
-              </p>
-              <p className="mt-1">
-                <strong>Contact Page:</strong>{" "}
-                <Link href="/contact" className="text-blue-600 hover:underline">
-                  /contact
-                </Link>
+      <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px]">
+          <article className="min-w-0 space-y-6">
+            {/* Important notice */}
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 dark:border-amber-900/70 dark:bg-amber-950/30 sm:p-6">
+              <h2 className="font-semibold text-amber-950 dark:text-amber-200">
+                Important notice
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-amber-900 dark:text-amber-100/90">
+                FinanceTools calculators provide estimates only. Check
+                important figures with the relevant bank, lender or qualified
+                professional before making a financial decision.
               </p>
             </div>
-          </div>
+
+            {/* Introduction */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+              <p className="text-base leading-7 text-slate-600 dark:text-slate-300">
+                Welcome to <strong className="text-slate-900 dark:text-white">FinanceTools</strong>.
+                By accessing or using this website, you acknowledge that you
+                have read and agree to these Terms &amp; Conditions.
+              </p>
+            </div>
+
+            {/* Terms sections */}
+            {sections.map((section) => (
+              <section
+                key={section.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8"
+              >
+                <h2 className="text-lg font-bold tracking-tight text-slate-900 dark:text-white sm:text-xl">
+                  {section.title}
+                </h2>
+
+                <div className="mt-3 text-[15px] leading-7 text-slate-600 dark:text-slate-300">
+                  {section.content}
+                </div>
+              </section>
+            ))}
+
+            {/* Contact */}
+            <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+              <h2 className="text-lg font-bold tracking-tight text-slate-900 dark:text-white sm:text-xl">
+                14. Contact Us
+              </h2>
+
+              <p className="mt-3 text-[15px] leading-7 text-slate-600 dark:text-slate-300">
+                If you have questions about these Terms &amp; Conditions, you
+                can contact us through our Contact page.
+              </p>
+
+              <Link
+                href="/contact"
+                className="mt-4 inline-flex items-center rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+              >
+                Contact Us
+              </Link>
+            </section>
+
+            <p className="px-1 text-sm leading-6 text-slate-500 dark:text-slate-400">
+              These terms are intended to explain the general use of
+              FinanceTools. They do not replace any rights or protections
+              provided by applicable law.
+            </p>
+          </article>
+
+          {/* Sidebar */}
+          <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:sticky lg:top-24">
+            <h2 className="text-base font-semibold text-slate-900 dark:text-white">
+              FinanceTools
+            </h2>
+
+            <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              Explore free financial calculators and helpful resources.
+            </p>
+
+            <Link
+              href="/tools"
+              className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+            >
+              Explore Calculators
+            </Link>
+
+            <div className="mt-5 border-t border-slate-200 pt-5 dark:border-slate-800">
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
+                Related pages
+              </h3>
+
+              <nav aria-label="Related pages" className="mt-3 space-y-3">
+                <Link
+                  href="/privacy-policy"
+                  className="block text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+                >
+                  Privacy Policy
+                </Link>
+
+                <Link
+                  href="/disclaimer"
+                  className="block text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+                >
+                  Disclaimer
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="block text-sm text-slate-600 transition hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+                >
+                  Contact Us
+                </Link>
+              </nav>
+            </div>
+          </aside>
         </div>
 
-        {/* Back Link */}
+        {/* Back to home */}
         <div className="mt-10 text-center">
           <Link
             href="/"
-            className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700"
+            className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
           >
-            ← Back to Home
+            <span aria-hidden="true">←</span>
+            Back to Home
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

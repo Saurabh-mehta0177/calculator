@@ -8,15 +8,15 @@ const faqs = [
   },
   {
     q: 'How does an FD work?',
-    a: 'You deposit a lump sum amount, choose a tenure and interest payout option. The bank pays interest as per the applicable rate and compounding method. At maturity you receive the principal plus applicable interest (or interest is paid periodically if chosen).',
+    a: 'You deposit a lump sum amount with a bank or financial institution, select a tenure and choose an available interest payout option. The deposit earns interest according to the agreed rate and applicable calculation method. In a cumulative FD, interest is reinvested and paid along with the principal at maturity. In a non-cumulative FD, interest is paid periodically as per the selected payout frequency.',
   },
   {
     q: 'What is the FD maturity formula?',
-    a: 'For compounded FD, maturity is generally calculated as M = P × (1 + r/n)^(n×t), where P is principal, r is annual rate, n is compounding frequency per year and t is tenure in years. Exact calculation depends on the bank’s compounding method and product terms.',
+    a: 'For a cumulative fixed deposit with periodic compounding, the estimated maturity amount can be calculated using M = P × (1 + r/n)^(n×t), where P is the principal, r is the annual interest rate in decimal form, n is the number of compounding periods per year and t is the tenure in years. This formula is a mathematical estimate; actual bank calculations may account for completed quarters, additional days and product-specific rules.',
   },
   {
     q: 'How is FD interest calculated?',
-    a: 'Interest is calculated on the principal for the selected tenure. Most Indian banks compound interest quarterly, subject to the specific FD product terms and payout option (cumulative or non-cumulative).',
+    a: 'FD interest depends on the principal amount, applicable interest rate, deposit tenure, compounding method and payout option. For cumulative FDs, interest is generally compounded and added to the deposit balance according to the banks terms. Non-cumulative FDs pay interest periodically. The actual interest calculation method may vary between banks and deposit products.',
   },
   {
     q: 'Is FD better than RD?',
@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     q: 'Can I withdraw FD before maturity?',
-    a: 'Premature withdrawal is usually allowed subject to bank conditions, reduced interest rate and applicable penalties or charges.',
+    a: 'Many fixed deposits allow premature withdrawal, subject to the bank terms and applicable restrictions. The bank may recalculate interest using the rate applicable for the actual deposit period and apply a premature withdrawal penalty. Certain deposits, such as tax-saving FDs, may have a mandatory lock-in period. Always check the deposit terms before withdrawing early.',
   },
   {
     q: 'Is FD interest taxable?',
-    a: 'FD interest is generally taxable under applicable Indian income-tax rules. TDS may be deducted as per current law and thresholds.',
+    a: 'Interest earned from fixed deposits is generally taxable under the applicable Indian income-tax rules and is usually added to your taxable income under the relevant head. Banks may deduct Tax Deducted at Source (TDS) when applicable thresholds and conditions are met. TDS is not necessarily your final tax liability. Your actual tax depends on your income, applicable tax regime and eligibility for deductions or exemptions.',
   },
   {
     q: 'What happens if I break an FD early?',
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: 'Can students open an FD?',
-    a: 'Many banks allow minors to open FD accounts through a parent or guardian, subject to bank rules and KYC requirements.',
+    a: 'Yes. Students who are legally eligible can open fixed deposits in their own name, subject to the bank account-opening and KYC requirements. Minors can also hold FDs through a parent or legal guardian, depending on the bank policies. The required documents and operating conditions may vary.',
   },
   {
     q: 'Can senior citizens get higher FD interest?',
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: 'Is FD safe?',
-    a: 'Safety depends on the institution. Eligible bank deposits in India are covered by DICGC insurance up to ₹5 lakh per depositor per insured bank, including principal and interest.',
+    a: 'Fixed deposits with insured banks in India are eligible for DICGC deposit insurance up to ₹5 lakh per depositor per insured bank, including principal and interest. The limit applies to deposits held in the same right and capacity and is aggregated across branches of the same bank. Deposits above the insured limit may not be fully protected. Always verify whether your bank is covered by DICGC insurance.',
   },
   {
     q: 'What is the minimum FD amount?',
@@ -65,21 +65,21 @@ const faqs = [
 ]
 
 const advantages = [
-  'Offers relatively predictable returns for the chosen tenure.',
-  'Suitable for parking lump-sum savings safely.',
-  'Available in multiple tenures to match short and medium-term goals.',
-  'Senior citizens often get higher interest rates.',
-  'Flexible interest payout options (cumulative or periodic).',
-  'Eligible bank deposits enjoy DICGC insurance cover up to the prescribed limit.',
+  'Offers relatively predictable returns when held according to the agreed deposit terms.',
+  'Suitable for investing lump-sum savings for a predefined period.',
+  'Available in multiple tenures to match short and medium-term financial goals.',
+  'Many banks offer additional interest rates to eligible senior citizens.',
+  'Offers different interest payout options, including cumulative and periodic payouts.',
+  'Eligible deposits in DICGC-insured banks are covered up to ₹5 lakh per depositor per bank, subject to insurance rules.',
 ]
 
 const disadvantages = [
   'Requires a lump-sum amount at the start.',
   'Premature withdrawal usually attracts penalty and lower interest.',
   'Returns may lag behind inflation in some periods.',
-  'Interest is generally taxable.',
+  'FD interest is generally taxable according to applicable income-tax rules, and TDS may apply.',
   'Liquidity is limited compared to savings accounts.',
-  'Reinvestment risk exists when interest rates change at maturity.',
+  'Interest rates offered on renewal may be lower or higher than the original FD rate, affecting future returns.',
 ]
 
 const sections = [
@@ -265,13 +265,19 @@ export default function FDGuide() {
       >
         <div className="rounded-2xl bg-slate-950 p-5 text-white sm:p-7">
           <p className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-            Compound Interest Formula (Common Approximation)
+            Compound Interest Formula for Cumulative Fixed Deposits
           </p>
 
           <div className="mt-5 overflow-x-auto">
             <p className="min-w-max font-mono text-xl leading-10 sm:text-2xl">
               M = P × (1 + r/n)<sup>n×t</sup>
             </p>
+            <p className="mt-3 text-xs leading-6 text-slate-400">
+  Here, r is the annual interest rate in decimal form
+  (for example, 7% = 0.07), n is the number of compounding
+  periods per year, and t is the tenure in years.
+  For quarterly compounding, n = 4.
+</p>
           </div>
 
           <p className="mt-3 text-xs leading-6 text-slate-400">
@@ -314,10 +320,8 @@ export default function FDGuide() {
             Important Calculation Note
           </h3>
           <p className="mt-2 text-sm leading-7 text-amber-900 dark:text-amber-200">
-            This formula is a standard approximation. Actual bank calculations can
-            differ because of day-count conventions, compounding frequency, interest
-            payout type, leap years and rounding rules. Always verify the maturity
-            amount with your bank’s quotation or FD certificate.
+            This formula estimates the maturity amount of a cumulative fixed deposit using periodic compounding.
+             The result may differ from the bank's actual quotation due to its calculation method and deposit terms.
           </p>
         </div>
       </GuideSection>
@@ -343,11 +347,36 @@ export default function FDGuide() {
           ))}
         </div>
 
-        <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
-          Using the compound interest formula, the estimated maturity amount can be
-          calculated. The exact interest earned depends on the bank’s compounding
-          method and product terms. Use the FD calculator for a quick estimate.
-        </p>
+        <div className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900 dark:bg-emerald-950/30">
+  <h3 className="font-extrabold text-emerald-800 dark:text-emerald-300">
+    Estimated Calculation Result
+  </h3>
+
+  <div className="mt-4 space-y-3 text-sm">
+    <div className="flex justify-between gap-3">
+      <span>Principal Amount</span>
+      <strong>₹1,00,000.00</strong>
+    </div>
+
+    <div className="flex justify-between gap-3">
+      <span>Interest Earned</span>
+      <strong>₹41,477.82</strong>
+    </div>
+
+    <div className="flex justify-between gap-3 border-t border-emerald-200 pt-3 dark:border-emerald-800">
+      <span className="font-bold">Maturity Amount</span>
+      <strong className="text-lg text-emerald-700 dark:text-emerald-300">
+        ₹1,41,477.82
+      </strong>
+    </div>
+  </div>
+
+  <p className="mt-4 text-xs leading-6 text-slate-600 dark:text-slate-400">
+    This is an illustrative estimate using quarterly compounding.
+    Actual bank maturity values may differ according to deposit terms
+    and calculation rules.
+  </p>
+</div>
 
         <Link
           href="/fd-calculator"
