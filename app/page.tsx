@@ -18,7 +18,7 @@ import OneRupeeChallengePreview from '@/components/home/OneRupeeChallengePreview
 
 // SEO Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL('https://YOUR-DOMAIN.com'),
+  metadataBase: new URL('https://smartmoneytools.xyz'),
 
   title: {
     default: 'FinanceTools - Free Financial Calculators',
