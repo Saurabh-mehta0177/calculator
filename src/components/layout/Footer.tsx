@@ -76,18 +76,15 @@ export default function Footer() {
               </div>
 
               <span className="text-2xl font-extrabold tracking-tight">
-                Finance<span className="text-blue-400">Tools</span>
+                SmartMoney<span className="text-blue-400">Tools</span>
               </span>
-
+  
             </Link>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-gray-400">
-              Your trusted destination for free online financial
-              calculators, practical finance guides and useful
-              money management tools. Explore loan payments,
-              savings estimates, investment projections and
-              financial planning resources to make more informed
-              financial decisions.
+              SmartMoneyTools is your destination for free online financial calculators,
+               practical finance guides and useful money management tools. Explore loan payments,
+                savings estimates, investment projections and financial planning resources to make more informed financial decisions.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -204,11 +201,11 @@ export default function Footer() {
                 id="footer-disclaimer-heading"
                 className="text-sm font-bold text-amber-300"
               >
-                Important Financial Disclaimer
+                Important SmartMoneyTools Disclaimer
               </h2>
 
               <p className="mt-3 text-xs leading-7 text-gray-400 sm:text-sm">
-                FinanceTools provides financial calculators,
+                SmartMoneyTools provides financial calculators,
                 estimates and educational information for general
                 informational purposes only. Calculator results
                 are based on the details and assumptions entered
@@ -234,12 +231,12 @@ export default function Footer() {
           <div>
 
             <p className="text-xs leading-6 text-gray-500">
-              © {new Date().getFullYear()} FinanceTools.
+              © {new Date().getFullYear()} SmartMoneyTools.
               All Rights Reserved.
             </p>
 
             <p className="mt-1 text-xs text-gray-600">
-              Made for smarter financial decisions.
+              Made for smarter Money Tools decisions.
             </p>
 
           </div>

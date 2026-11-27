@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
       <div className="relative mx-auto max-w-3xl text-center">
 
         <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-100/70 px-4 py-2 text-xs font-bold uppercase tracking-wider text-blue-700 dark:border-blue-800 dark:bg-blue-950/60 dark:text-blue-300">
-          ✨ Why Choose FinanceTools
+          ✨ Why Choose SmartMoneyTools
         </span>
 
         <h2

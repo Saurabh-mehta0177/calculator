@@ -114,7 +114,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-blue-200">
               <span className="h-2 w-2 rounded-full bg-blue-400" />
-              Contact FinanceTools
+              Contact SmartMoneyTools
             </div>
 
             <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -208,7 +208,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="font-bold text-slate-900">
-                    Explore FinanceTools
+                    Explore SmartMoneyTools
                   </h3>
 
                   <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -238,7 +238,7 @@ export default function ContactPage() {
 
                 <div>
                   <h3 className="font-bold text-slate-900">
-                    About FinanceTools
+                    About SmartMoneyTools
                   </h3>
 
                   <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -506,7 +506,7 @@ export default function ContactPage() {
 
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
               Here are answers to common questions about contacting
-              FinanceTools and reporting calculator issues.
+            SmartMoneyTools and reporting calculator issues.
             </p>
           </div>
 
@@ -540,7 +540,7 @@ export default function ContactPage() {
       <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-5xl rounded-3xl bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 px-6 py-12 text-center text-white shadow-xl shadow-blue-200/50 sm:px-12 sm:py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-200">
-            Explore FinanceTools
+            Explore SmartMoneyTools
           </p>
 
           <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
@@ -567,7 +567,7 @@ export default function ContactPage() {
               href="/about"
               className="inline-flex items-center justify-center rounded-xl border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
             >
-              About FinanceTools
+              About SmartMoneyTools
             </Link>
           </div>
         </div>

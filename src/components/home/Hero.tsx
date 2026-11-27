@@ -20,8 +20,8 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold tracking-wider text-blue-100">
           <span aria-hidden="true">✦</span>
-          SMART FINANCIAL TOOLS
-        </span>
+           SMART MONEY TOOLS
+        </span> 
 
         <h1
           id="hero-heading"

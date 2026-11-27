@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | FinanceTools",
+  title: "Terms & Conditions | SmartMoneyTools",
   description:
-    "Read the Terms and Conditions for using FinanceTools financial calculators, including important information about estimates, user responsibilities, and data handling.",
+    "Read the Terms and Conditions for using SmartMoneyTools financial calculators, including important information about estimates, user responsibilities, and data handling.",
 };
 
 const sections = [
@@ -14,17 +14,17 @@ const sections = [
     title: "1. Acceptance of Terms",
     content: (
       <p>
-        By accessing or using FinanceTools, you agree to these Terms &
+        By accessing or using SmartMoneyTools, you agree to these Terms &
         Conditions. If you do not agree with these terms, please do not use
         this website.
       </p>
     ),
   },
   {
-    title: "2. About FinanceTools",
+    title: "2. About SmartMoneyTools",
     content: (
       <p>
-        FinanceTools provides free online financial calculators and related
+        SmartMoneyTools provides free online financial calculators and related
         informational content, including tools for EMI, loans, fixed deposits,
         recurring deposits, SIP, GST and other financial calculations. The
         website is intended to help users understand and estimate common
@@ -36,7 +36,7 @@ const sections = [
     title: "3. No Account or Login Required",
     content: (
       <p>
-        FinanceTools does not require users to create an account, register or
+        SmartMoneyTools does not require users to create an account, register or
         log in to use its calculators. You can access the available tools
         without creating a user profile.
       </p>
@@ -47,7 +47,7 @@ const sections = [
     content: (
       <>
         <p>
-          FinanceTools does not intentionally save the information you enter
+          SmartMoneyTools does not intentionally save the information you enter
           into its financial calculators. Calculator inputs are used to
           generate the requested calculation and are not stored by us as a
           user account or personal financial profile.
@@ -115,7 +115,7 @@ const sections = [
     content: (
       <p>
         Unless otherwise stated, the website’s text, branding, design and
-        original materials belong to FinanceTools or are used with permission.
+        original materials belong to SmartMoneyTools or are used with permission.
         You may not reproduce, distribute or create derivative works from
         these materials without the required permission, except where
         applicable law allows it.
@@ -126,7 +126,7 @@ const sections = [
     title: "9. Third-Party Websites and Services",
     content: (
       <p>
-        FinanceTools may contain links to third-party websites or services.
+        SmartMoneyTools may contain links to third-party websites or services.
         These links are provided for convenience. We do not control and are
         not responsible for the content, availability, terms or privacy
         practices of external websites. Please review their policies before
@@ -196,7 +196,7 @@ export default function TermsPage() {
             </h1>
 
             <p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
-              Please read these terms before using FinanceTools and its free
+              Please read these terms before using SmartMoneyTools and its free
               financial calculators.
             </p>
 
@@ -217,7 +217,7 @@ export default function TermsPage() {
                 Important notice
               </h2>
               <p className="mt-2 text-sm leading-6 text-amber-900 dark:text-amber-100/90">
-                FinanceTools calculators provide estimates only. Check
+                SmartMoneyTools calculators provide estimates only. Check
                 important figures with the relevant bank, lender or qualified
                 professional before making a financial decision.
               </p>
@@ -269,7 +269,7 @@ export default function TermsPage() {
 
             <p className="px-1 text-sm leading-6 text-slate-500 dark:text-slate-400">
               These terms are intended to explain the general use of
-              FinanceTools. They do not replace any rights or protections
+              SmartMoneyTools. They do not replace any rights or protections
               provided by applicable law.
             </p>
           </article>
@@ -277,7 +277,7 @@ export default function TermsPage() {
           {/* Sidebar */}
           <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:sticky lg:top-24">
             <h2 className="text-base font-semibold text-slate-900 dark:text-white">
-              FinanceTools
+             SmartMoneyTools
             </h2>
 
             <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">

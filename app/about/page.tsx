@@ -144,7 +144,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-blue-200">
               <span className="h-2 w-2 rounded-full bg-blue-400" />
-              About FinanceTools
+              About SmartMoneyTools
             </div>
 
             <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 href="/tools"
                 className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-950/20 transition hover:bg-blue-500"
               >
-                Explore Financial Calculators
+                Explore Financial Calculators  
                 <span aria-hidden="true" className="ml-2">
                   →
                 </span>
@@ -280,7 +280,7 @@ export default function AboutPage() {
             </p>
 
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Financial tools built around real questions
+               SmartMoneyTools built around real questions 
             </h2>
 
             <p className="mt-5 text-base leading-8 text-slate-600">
@@ -395,7 +395,7 @@ export default function AboutPage() {
             href="/tools"
             className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-slate-800"
           >
-            View All Financial Calculators
+            View All SmartMoneyTools Calculators
           </Link>
         </div>
       </section>
@@ -626,7 +626,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            FinanceTools provides financial calculators and educational
+            SmartMoneyTools provides financial calculators and educational
             information for general informational purposes. Calculator results
             are estimates based on the values and assumptions used. They are
             not guaranteed outcomes or personalised financial, investment, tax

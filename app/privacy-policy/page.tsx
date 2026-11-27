@@ -5,18 +5,18 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | FinanceTools",
+  title: "Privacy Policy | SmartMoneyTools",
   description:
-    "Read the FinanceTools Privacy Policy to understand how calculator inputs, contact messages, cookies and third-party services may be handled when you use our website.",
+    "Read the SmartMoneyTools Privacy Policy to understand how calculator inputs, contact messages, cookies and third-party services may be handled when you use our website.",
   alternates: {
     canonical: "https://smartmoneytools.xyz/privacy-policy/",
   },
   openGraph: {
-    title: "Privacy Policy | FinanceTools",
+    title: "Privacy Policy | SmartMoneyTools",
     description:
-      "Learn how FinanceTools handles information, cookies and third-party services when you use our financial calculators.",
+      "Learn how SmartMoneyTools handles information, cookies and third-party services when you use our financial calculators.",
     url: "https://smartmoneytools.xyz/privacy-policy/",
-    siteName: "FinanceTools",
+    siteName: "SmartMoneyTools",
     type: "website",
   },
 };
@@ -225,7 +225,7 @@ export default function PrivacyPolicyPage() {
 
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-gray-300">
               This page explains what information may be handled when you use
-              FinanceTools, how it may be used, and how to contact us with
+             SmartMoneyTools, how it may be used, and how to contact us with
               privacy questions.
             </p>
           </div>
@@ -235,7 +235,7 @@ export default function PrivacyPolicyPage() {
       {/* Policy content */}
       <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8 lg:p-10 dark:border-gray-800 dark:bg-gray-900">
-          <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50/70 p-4 dark:border-blue-900/50 dark:bg-blue-950/20">
+          {/* <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50/70 p-4 dark:border-blue-900/50 dark:bg-blue-950/20">
             <p className="text-sm leading-6 text-slate-700 dark:text-gray-300">
               <strong className="text-slate-900 dark:text-white">
                 A note about this policy:
@@ -244,8 +244,8 @@ export default function PrivacyPolicyPage() {
               are actually enabled on FinanceTools. Please verify the
               calculator implementation, analytics, cookies and advertising
               setup before publishing.
-            </p>
-          </div>
+            </p> 
+          </div> */}
 
           <div className="space-y-9 text-sm leading-7 text-slate-600 sm:text-base dark:text-gray-300">
             <section aria-labelledby="introduction-heading">
@@ -257,7 +257,7 @@ export default function PrivacyPolicyPage() {
               </h2>
 
               <p className="mt-3">
-                At <strong className="text-slate-900 dark:text-white">FinanceTools</strong>{" "}
+                At <strong className="text-slate-900 dark:text-white">SmartMoneyTools</strong>{" "}
                 (“we”, “us” or “our”), we respect your privacy. This Privacy
                 Policy describes how information may be collected, used and
                 shared when you visit our website and use its financial
@@ -311,7 +311,7 @@ export default function PrivacyPolicyPage() {
                     href="/"
                     className="font-semibold text-blue-700 underline-offset-4 hover:underline dark:text-blue-300"
                   >
-                    FinanceTools
+                   SmartMoneyTools
                   </Link>
                 </p>
 

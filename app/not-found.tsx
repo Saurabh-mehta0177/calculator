@@ -1,13 +1,5 @@
 
-"use client";
-
-import { useEffect } from "react";
-
 export default function NotFound() {
-  useEffect(() => {
-    window.location.replace("/");
-  }, []);
-
   return (
     <main
       style={{
@@ -20,8 +12,11 @@ export default function NotFound() {
         padding: "20px",
       }}
     >
-      <h1>Page Not Found</h1>
-      <p>Redirecting you to Smart Money Tools...</p>
+      <h1>404 - Page Not Found</h1>
+      <p>
+        Sorry, the page you are looking for
+        does not exist.
+      </p>
       <a href="/">Go to Homepage</a>
     </main>
   );

@@ -180,7 +180,7 @@ export default function Navbar() {
         <div className="mx-auto flex h-[78px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
           {/* LOGO */}
-          <Link
+          {/* <Link
             href="/"
             onClick={closeMenu}
             className="group flex shrink-0 items-center gap-3"
@@ -206,7 +206,56 @@ export default function Navbar() {
                 SMART FINANCIAL TOOLS
               </div>
             </div>
-          </Link>
+          </Link> */}
+
+          
+<Link
+  href="/"
+  onClick={closeMenu}
+  className="group flex shrink-0 items-center gap-3"
+>
+  {/* Logo Icon */}
+  <div className="relative">
+    {/* Outer Glow */}
+    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 opacity-40 blur-md transition-all duration-500 group-hover:opacity-80 group-hover:blur-lg" />
+
+    {/* Main Icon */}
+    <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-white/30 bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-700 text-white shadow-lg shadow-blue-500/30 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6">
+
+      {/* Shine Effect */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-white/25 via-transparent to-transparent" />
+
+      {/* S Letter */}
+      <span className="relative z-10 text-3xl font-black tracking-tighter drop-shadow-md">
+        S
+      </span>
+
+      {/* Decorative Glow */}
+      <div className="absolute -right-2 -top-2 h-8 w-8 rounded-full bg-white/40 blur-lg" />
+
+      <div className="absolute -bottom-3 -left-2 h-8 w-8 rounded-full bg-cyan-300/40 blur-lg" />
+    </div>
+  </div>
+
+  {/* Brand Name */}
+  <div className="flex flex-col">
+    <div className="text-[21px] font-black leading-tight tracking-tight text-gray-900 dark:text-white">
+      Smart
+      <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 bg-clip-text text-transparent">
+        Money
+      </span>
+      <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Tools
+      </span>
+    </div>
+
+    {/* Tagline */}
+    <div className="mt-0.5 text-[9px] font-extrabold uppercase tracking-[2.2px] text-gray-500 dark:text-gray-400">
+      Understand. Save. Grow.
+    </div>
+  </div>
+</Link>
+
 
           {/* DESKTOP NAVIGATION */}
           <div className="hidden items-center gap-1 lg:flex">
